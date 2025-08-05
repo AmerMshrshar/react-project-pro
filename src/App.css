@@ -1,38 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+  font-family: "Cairo", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  direction: rtl;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body,
+#root,
+.App {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+  font-family: "Cairo", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+html[dir="rtl"] .MuiDrawer-paperAnchorLeft {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .MuiDrawer-paperAnchorDockedLeft {
+  border-left: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+html[dir="rtl"] ::-webkit-scrollbar {
+  width: 6px;
+}
+
+html[dir="rtl"] ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html[dir="rtl"] ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+html[dir="rtl"] ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.MuiListItemButton-root {
+  transition: all 0.2s ease-in-out !important;
+}
+
+.MuiDrawer-paper {
+  transition: all 0.3s ease-in-out !important;
+}
+
+html[dir="rtl"] .MuiListItemButton-root.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08) !important;
+  border-right: 3px solid #1976d2 !important;
+  border-left: none !important;
+}
+
+html[dir="rtl"] .MuiListItemButton-root.Mui-selected .MuiListItemIcon-root {
+  color: #1976d2 !important;
+}
+
+html[dir="rtl"] .MuiListItemButton-root.Mui-selected .MuiListItemText-primary {
+  color: #1976d2 !important;
+  font-weight: 500 !important;
+}
+
+html[dir="rtl"] .MuiTableCell-root {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .MuiTableCell-head {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .MuiTextField-root .MuiInputBase-input {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .MuiFormControlLabel-root {
+  margin-left: 0 !important;
+  margin-right: -11px !important;
+}
+
+html[dir="rtl"] .MuiSelect-select {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .MuiChip-root {
+  direction: rtl;
+}
+
+html[dir="rtl"] .MuiButton-startIcon {
+  margin-left: 8px !important;
+  margin-right: -4px !important;
+}
+
+html[dir="rtl"] .MuiButton-endIcon {
+  margin-right: 8px !important;
+  margin-left: -4px !important;
+}
+
+html[dir="rtl"] .MuiListItemIcon-root {
+  min-width: 36px !important;
+  margin-left: 16px !important;
+  margin-right: 0 !important;
+}
+
+html[dir="rtl"] .MuiGrid-container {
+  direction: rtl;
+}
+
+html[dir="rtl"] .MuiAlert-icon {
+  margin-left: 12px !important;
+  margin-right: 0 !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid #e0e0e0 !important;
+}
+
+.MuiButton-root:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.MuiIconButton-root:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.MuiTouchRipple-root {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .MuiToolbar-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+:focus {
+  outline: none !important;
+}
+
+::-moz-focus-inner {
+  border: 0 !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] div {
+  text-align: right;
+  font-family: "Cairo", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+html[dir="rtl"] .arabic-numbers {
+  font-feature-settings: "tnum";
+}
+
+html[dir="rtl"] .MuiBox-root {
+  direction: rtl;
 }
