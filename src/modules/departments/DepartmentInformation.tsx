@@ -162,6 +162,7 @@ const DepartmentInformation: React.FC<DepartmentInformationProps> = ({
           type="select"
           options={parentDepartmentOptions}
           loading={loadingParents}
+          readOnly
         />
 
         <InputField
